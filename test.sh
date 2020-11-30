@@ -17,4 +17,14 @@ else
     exit 1
 fi
 
+export CORRECT3="{ c: [ 'THERE', 'NAME', 'BRAD' ] }";  
+export TEST3="`echo "hey\nthere\nmy\nname\nis\nBrad" | jeval "cl(this.l.toUpperCase())" | jeval "let r={c: []}; r" "this.l.length > 3 && this.a.c.push(this.l);" "cl(this);"`"; 
+if [[ "$CORRECT3" == "$TEST3" ]]; then
+    echo "Test 3 Passes"
+else
+    echo "Test 3 Fails"
+    exit 1
+fi
+
+
 exit 0
