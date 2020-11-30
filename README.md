@@ -2,7 +2,9 @@
 
 # What is this?
 
-A tool that allows you to use Javascript when mapping over lines from stdin. Meant to be used when mapping over results from a shell command. This can also handle reduce and filter and probably other functional methods that I have not demoed below:
+A tool that allows you to use Javascript when mapping over lines from stdin. Meant to be used when mapping over results from a shell command. This can also handle reduce and filter and probably other functional methods that I have not demoed below.
+
+For a similar tool with more options checkout [jsin](https://github.com/bebrws/jsin)
 
 #### Example of map - Print out each line with an @ symbol appended
 ```
