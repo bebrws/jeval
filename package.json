@@ -1,6 +1,6 @@
 {
   "name": "jeval",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Map Reduce Filter etc using JS on the command line",
   "main": "jeval.js",
   "scripts": {
