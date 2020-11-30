@@ -1,0 +1,15 @@
+{
+  "name": "jeval",
+  "version": "1.0.0",
+  "description": "Map Reduce Filter etc using JS on the command line",
+  "main": "jeval.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "jeval": "jeval.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
