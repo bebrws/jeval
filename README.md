@@ -21,5 +21,5 @@ echo "hey\nthere\n" | jeval "[]" "console.log(this.l + \"@\"); this.a.push(this.
 ```
 * A demo showing map then reduce
 ```
-echo "hey\nthere\nmy\nname\nis\nbrad" | jeval "console.log(this.l.toUpperCase())" | jeval "[]" "this.l.length > 3 && this.a.push(this.l);" "console.log(this);"
+echo "hey\nthere\nmy\nname\nis\nbrad" | jeval "console.log(this.l.toUpperCase())" | jeval "([])" "this.l.length > 3 && this.a.push(this.l);" "console.log(this);"
 ```

@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 export CORRECT1="[ 'THERE', 'NAME', 'BRAD' ]";  
-export TEST1="`echo "hey\nthere\nmy\nname\nis\nBrad" | jeval "cl(this.l.toUpperCase())" | jeval "[]" "this.l.length > 3 && this.a.push(this.l);" "cl(this);"`"; 
+export TEST1="`echo "hey\nthere\nmy\nname\nis\nBrad" | jeval "cl(this.l.toUpperCase())" | jeval "([])" "this.l.length > 3 && this.a.push(this.l);" "cl(this);"`"; 
 if [[ "$CORRECT1" == "$TEST1" ]]; then
     echo "Test 1 Passes"
 else
@@ -18,7 +18,7 @@ else
 fi
 
 export CORRECT3="{ c: [ 'THERE', 'NAME', 'BRAD' ] }";  
-export TEST3="`echo "hey\nthere\nmy\nname\nis\nBrad" | jeval "cl(this.l.toUpperCase())" | jeval "let r={c: []}; r" "this.l.length > 3 && this.a.c.push(this.l);" "cl(this);"`"; 
+export TEST3="`echo "hey\nthere\nmy\nname\nis\nBrad" | jeval "cl(this.l.toUpperCase())" | jeval "({c: []})" "this.l.length > 3 && this.a.c.push(this.l);" "cl(this);"`"; 
 if [[ "$CORRECT3" == "$TEST3" ]]; then
     echo "Test 3 Passes"
 else
