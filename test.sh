@@ -27,4 +27,14 @@ else
 fi
 
 
+export CORRECT4="`echo "name\nBrad\n"`";  
+export TEST4="`echo "hey\nthere\nmy\nname\nis\nBrad" | jeval "this.l.includes('a')"`"; 
+if [[ "$CORRECT4" == "$TEST4" ]]; then
+    echo "Test 4 Passes"
+else
+    echo "Test 4 Fails"
+    exit 1
+fi
+
+
 exit 0
