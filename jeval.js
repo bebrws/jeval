@@ -42,7 +42,7 @@ if (process.argv.length === 5) {
 }
 
 function evalInContext(stringToEval) {
-    eval(stringToEval);
+    return eval(stringToEval);
 }
 
 var rl = readline.createInterface({
@@ -55,7 +55,11 @@ let i = 0;
 
 rl.on('line', function (line) {
   i += 1;
-  line.length && evalInContext.call({l: line, a: acc, i}, evalString);
+  if (line.length) {
+    const evaled = evalInContext.call({l: line, a: acc, i}, evalString);
+    // If the evaled code returns true then log out the input line
+    typeof evaled === 'boolean' && evaled && console.log(line);
+  } 
 });
 
 rl.on('close', function (line) {
